@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">PinguCoder Board</h1>
+    <div class="drag-container">
+      <ul class="drag-list">
+        <!-- Backlog column -->
+        <li class="drag-column backlog-column">
+          <span class="header">
+            <h1>Backlog</h1>
+          </span>
+          <!-- Backlog Content -->
+          <div id="backlog-content" class="custom-scroll">
+            <ul class="drag-item-list" id="backlog-list" ondragenter="drageEnter(0)" ondrop="drop(event)" ondragover="allowDrop(event)">
+           
+            </ul
+          </div>
+          <!-- Add button group -->
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputbox(0)">
+              <span class="plus-sign">+</span>
+              <span> Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputbox(0)">
+              <span>Save Item</span>
+            </div>
+          </div>
+            <div class="add-container">
+              <div class="add-item" contenteditable="true"></div>
+            </div>
+        
+        </li>
+        <!-- Progress column -->
+        <li class="drag-column progress-column">
+          <span class="header">
+            <h1>Progress</h1>
+          </span>
+          <!-- progress Content -->
+          <div id="progress-content" class="custom-scroll">
+            <ul class="drag-item-list" id="progress-list" ondragenter="drageEnter(1)" ondrop="drop(event)" ondragover="allowDrop(event)">
+             
+            </ul>
+          </div>
+          <!-- Add button group -->
+          <div class="add-btn-group" onclick="showInputbox(1)">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span> Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputbox(1)">
+              <span>Save Item</span>
+            </div>
+          </div>
+            <div class="add-container">
+              <div class="add-item" contenteditable="true"></div>
+            </div>
+        </li>
+        <!-- Complete content -->
+        <li class="drag-column complete-column">
+          <span class="header">
+            <h1>Complete</h1>
+          </span>
+          <!-- complete Content -->
+          <div id="complete-content" class="custom-scroll">
+            <ul class="drag-item-list" id="complete-list"  ondragenter="drageEnter(2)" ondrop="drop(event)" ondragover="allowDrop(event)">
+           
+            </ul>
+          </div>
+          <!-- Add button group -->
+          <div class="add-btn-group" onclick="showInputbox(2)">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span> Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputbox(2)">
+              <span>Save Item</span>
+            </div>
+          </div>
+            <div class="add-container">
+              <div class="add-item" contenteditable="true"></div>
+            </div>
+         
+        </li>
+        <!-- On hold content column -->
+        <li class="drag-column on-hold-column">
+          <span class="header">
+            <h1>On-hold</h1>
+          </span>
+          <!-- on-hold Content -->
+          <div id="on-hold-content" class="custom-scroll">
+            <ul class="drag-item-list" id="on-hold-list" ondragenter="drageEnter(3)" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <!-- <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li>
+              <li class="drag-item">Testing</li> -->
+              <!-- <li class="drag-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                laborum aspernatur, eum unde enim nostrum vitae, aliquid omnis
+                impedit ipsum doloribus dolorum explicabo asperiores, fugit
+                voluptates ducimus repudiandae. Ad, officia. Vero voluptates
+                doloribus consectetur iste rem maxime dolore delectus inventore
+                temporibus, possimus accusantium incidunt tempore aliquam iure
+                harum deserunt. Distinctio delectus quo eius reprehenderit
+                corporis fugit doloremque ea, vel omnis? Atque dicta voluptate
+                possimus nesciunt esse ex culpa aspernatur maxime recusandae
+                reiciendis. Necessitatibus blanditiis dolores odio, reiciendis
+                saepe ullam consectetur minima totam ipsa a distinctio
+                reprehenderit commodi placeat dolore sunt? Esse dolore corporis,
+                doloribus illo sequi ipsa itaque possimus architecto molestias
+                doloremque reiciendis distinctio accusamus velit sit, tempore
+                natus? Officiis voluptatem asperiores est odio, esse nulla atque
+                explicabo libero magnam!
+              </li> -->
+            </ul>
+          </div>
+          <!-- Add button group -->
+          <div class="add-btn-group" onclick="showInputbox(3)">
+            <div class="add-btn">
+              <span class="plus-sign">+</span>
+              <span> Add Item</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputbox(3)">
+              <span>Save Item</span>
+            </div>
+          </div>
+            <div class="add-container">
+              <div class="add-item" contenteditable="true"></div>
+            </div>
+          
+        </li>
+      </ul>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
